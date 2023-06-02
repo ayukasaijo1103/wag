@@ -7,6 +7,10 @@
 .page-header{
     display: flex;
     justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 .main-nav{
     display: flex;
@@ -37,29 +41,29 @@
 
 .page-title{
     position: absolute;
-    margin-left: 250px;
+    margin-left: 190px;
     margin-top: 70px;
     font-family: 'Cormorant Garamond', serif;
 }
 
-/*HOME CONTENT*/
+/*MAIN PAGE*/
 .slideshow-container {
     width: 1000px;
-    height: 600px; /* スライドショーの高さを調整 */
+    height:600px; /* スライドショーの高さを調整 */
     display: flex;
     overflow: hidden;
     text-align: center;
-    margin: auto;
-    
+    margin: auto;  
   }
   
   .slide {
     position: absolute;
     width: 1000px;
-    height: 600px;
+    height: 600;
     opacity: 0;
     transition: opacity 1s ease-in-out;
     display: flex;
+    margin-top: 150px;
   }
   
   .slide.active {
@@ -73,45 +77,26 @@
   }
 
   .main-content{
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin: 50px;
     font-family: 'Cormorant Garamond', serif;
     text-align: center;
     line-height: 2rem;
+    margin-top: 150px;
   }
  
-  .main{
+  .main p{
     font-size: 2rem;
     font-weight: bold;
+    margin-bottom: 50px;
   }
-  .right-fixed-banner {
-    position: fixed;
-    bottom: 20%;
-    right: 0;
-    width: 10%;
-    margin-right: 10%;
-    text-align: center;
-    line-height: 100px;
-    font-size: 36px;
-  }
-  
-  .banner-box {
-    height: 100px;
-    border: 1px solid #000;
-  }
-  
-  #banner-1 {
-    background: skyblue;
-  }
-  
-  #banner-2 {
-    background: tomato;
-  }
-  
-  #banner-3 {
-    background: lime;
-  }
-  
-  #banner-4 {
-    background: yellow;
-  }
+ /*スクロールスナップ*/
+ .container{
+  overflow: auto;
+  scroll-snap-type: y proximity;
+  height: 100vh;
+ }
+ .section{
+  height: 100vh;
+  scroll-snap-align: start;
+ }
+ /*Message Page*/
