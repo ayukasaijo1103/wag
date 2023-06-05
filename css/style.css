@@ -1,7 +1,8 @@
 /*HEADER*/
 .logo{
-    height: 160px;
-    width: 200px;
+    height: 100px;
+    width: 150px;
+    object-fit: cover;
 }
 
 .page-header{
@@ -11,13 +12,16 @@
     top: 0;
     left: 0;
     width: 100%;
-}
+    background-color: #BC9A78;
+    height: 100px;
+    z-index:9999;
+  }
 .main-nav{
     display: flex;
     position: relative;
     list-style: none;
     margin-right: 100px;
-    margin-top: 70px;
+    margin-top: 40px;
 }
 .main-nav a{
     color: #432;
@@ -41,11 +45,11 @@
 
 .page-title{
     position: absolute;
-    margin-left: 190px;
-    margin-top: 70px;
-    font-family: 'Cormorant Garamond', serif;
-}
-
+    margin-left: 150px;
+    margin-top: 40px;
+    font-family: 'Cutive Mono', monospace;
+        font-size: 1.5rem;
+    }
 /*MAIN PAGE*/
 .slideshow-container {
     width: 1000px;
@@ -53,7 +57,7 @@
     display: flex;
     overflow: hidden;
     text-align: center;
-    margin: auto;  
+    margin: auto; 
   }
   
   .slide {
@@ -82,12 +86,13 @@
     text-align: center;
     line-height: 2rem;
     margin-top: 150px;
+    font-size: 1rem;
   }
  
   .main p{
-    font-size: 2rem;
     font-weight: bold;
     margin-bottom: 50px;
+    text-align: center;
   }
  /*スクロールスナップ*/
  .container{
@@ -100,3 +105,26 @@
   scroll-snap-align: start;
  }
  /*Message Page*/
+.title{
+  font-family: 'Caveat', cursive;
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 2.5rem;
+}
+.message-page p{
+  font-family: 'Slackside One', cursive,'Hachi Maru Pop', cursive;
+  text-align: center;
+  line-height: 4rem;
+  font-size: 1.5rem;
+}
+
+.wag{
+  font-size: 2rem;
+}
+
+.fade-in {
+  opacity: 0; /* 初期状態では非表示 */
+  transition: opacity 2.5s ease-in; /* フェードインのアニメーションを追加 */
+}
+
+
