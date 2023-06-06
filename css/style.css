@@ -1,4 +1,9 @@
-/*HEADER*/
+/*共通---------------------------*/
+
+
+
+
+/*HEADER---------------------------------*/
 .logo{
     height: 100px;
     width: 150px;
@@ -50,7 +55,7 @@
     font-family: 'Cutive Mono', monospace;
         font-size: 1.5rem;
     }
-/*MAIN PAGE*/
+/*MAIN PAGE---------------------------------*/
 .slideshow-container {
     width: 1000px;
     height:600px; /* スライドショーの高さを調整 */
@@ -94,7 +99,7 @@
     margin-bottom: 50px;
     text-align: center;
   }
- /*スクロールスナップ*/
+ /*スクロールスナップ---------------------------------*/
  .container{
   overflow: auto;
   scroll-snap-type: y proximity;
@@ -104,18 +109,23 @@
   height: 100vh;
   scroll-snap-align: start;
  }
- /*Message Page*/
+ /*Message Page---------------------------------*/
 .title{
   font-family: 'Caveat', cursive;
   text-align: center;
-  margin-bottom: 10px;
+  padding-top: 40px;
+  margin-bottom: 30px;
   font-size: 2.5rem;
 }
 .message-page p{
-  font-family: 'Slackside One', cursive,'Hachi Maru Pop', cursive;
+  font-family: 'Cormorant Garamond', serif;
   text-align: center;
   line-height: 4rem;
-  font-size: 1.5rem;
+  font-size: 1.275rem;
+}
+
+.message-page{
+  background-color: rgba(245,222,179,0.65);
 }
 
 .wag{
@@ -127,4 +137,165 @@
   transition: opacity 2.5s ease-in; /* フェードインのアニメーションを追加 */
 }
 
+/*NEWS-PAGE---------------------------------*/
+
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: center;
+  justify-content: flex-end;
+}
+
+.container img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.caption {
+  margin-top: 10px;
+  font-size: 16px;
+  width: 300px;
+  font-family: 'Cormorant Garamond', serif;
+}
+.caption a{
+  text-decoration: none;
+  color: black;
+}
+.caption a:hover{
+  color: grey;
+}
+
+.news-title{
+  font-family: 'Caveat', cursive;
+  text-align: center;
+  padding-top: 40px;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+}
+.news-page{
+  background-color: rgba(228, 228, 228, 0.65);
+}
+
+/*ふわっと--------------------------*/
+.fadeUp {
+  animation-name:fadeUpAnime;
+  animation-duration:0.5s;
+  animation-fill-mode:forwards;
+  opacity: 0;
+  }
+  @keyframes fadeUpAnime{
+    from {
+      opacity: 0;
+    transform: translateY(100px);
+    }
+  
+    to {
+      opacity: 1;
+    transform: translateY(0);
+    }
+  }
+  
+  /* アニメーションスタートの遅延時間を決めるCSS*/
+  
+  .delay-time02{
+  animation-delay: 0.2s;
+  }
+  
+  .delay-time03{
+  animation-delay: 0.3s;
+  }
+  
+  .delay-time04{
+  animation-delay: 0.4s;
+  }
+  
+  
+  
+
+
+/*========= ローディング画面のためのCSS ===============*/
+#splash {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: #333;
+	z-index: 9999999;
+	text-align:center;
+	color:#fff;
+}
+
+#splash-logo {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+/*========= 画面遷移のためのCSS ===============*/
+
+/*画面遷移アニメーション*/
+.splashbg{
+  display: none;
+}
+
+/*bodyにappearクラスがついたら出現*/
+body.appear .splashbg{
+  display: block;
+  content: "";
+  position:fixed;
+z-index: 999;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+left: 0;
+  transform: scaleY(0);
+  background-color: #333;/*伸びる背景色の設定*/
+animation-name:PageAnime;
+animation-duration:1.2s;
+animation-timing-function:ease-in-out;
+animation-fill-mode:forwards;
+}
+@keyframes PageAnime{
+	0% {
+		transform-origin:top;
+		transform:scaleY(0);
+	}
+	50% {
+		transform-origin:top;
+		transform:scaleY(1);
+	}
+	50.001% {
+		transform-origin:bottom;
+	}
+	100% {
+		transform-origin:bottom;
+		transform:scaleY(0);
+	}
+}
+
+/*画面遷移の後現れるコンテンツ設定*/
+#container{
+	opacity: 0;/*はじめは透過0に*/
+}
+
+/*bodyにappearクラスがついたら出現*/
+body.appear #container{
+	animation-name:PageAnimeAppear;
+	animation-duration:2s;
+	animation-delay: 0.8s;
+	animation-fill-mode:forwards;
+	opacity: 0;
+}
+
+@keyframes PageAnimeAppear{
+	0% {
+	opacity: 0;
+	}
+	100% {
+	opacity: 1;
+}
+}
 
