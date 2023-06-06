@@ -140,13 +140,17 @@
 /*NEWS-PAGE---------------------------------*/
 
 .container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  display: grid;
   align-items: center;
-  text-align: center;
-  justify-content: flex-end;
+  text-align: center; 
+  grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
 }
+.box .fadeUp p {
+justify-content: center;
+}
+
+
+
 
 .container img {
   width: 300px;
@@ -211,6 +215,14 @@
   .delay-time04{
   animation-delay: 0.4s;
   }
+
+  .delay-time05{
+  animation-delay: 0.5s;
+  }
+  .delay-time06{
+  animation-delay: 0.6s;
+  }
+
   
   
   
