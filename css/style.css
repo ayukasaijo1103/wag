@@ -125,7 +125,7 @@
 }
 
 .message-page{
-  background-color: rgba(245,222,179,0.65);
+  padding-bottom: 100px;
 }
 
 .wag{
@@ -135,6 +135,38 @@
 .fade-in {
   opacity: 0; /* 初期状態では非表示 */
   transition: opacity 2.5s ease-in; /* フェードインのアニメーションを追加 */
+}
+
+
+.planePath {
+  stroke: #432;
+  stroke-width: .1%;
+  stroke-width: .1%;
+  stroke-dasharray: 1% 2%;
+  stroke-linecap: round;
+  fill: none;
+}
+
+.fil1 {
+  fill: #D9DADA;
+}
+
+.fil2 {
+  fill: #C5C6C6;
+}
+
+.fil4 {
+  fill: #9e9e9d;
+}
+
+.fil3 {
+  fill: #AEAFB0;
+}
+
+svg{
+  height: 200px;
+  width: 100%;
+  margin-top: 50px;
 }
 
 /*NEWS-PAGE---------------------------------*/
@@ -151,6 +183,7 @@ justify-content: center;
 
 
 
+/*飛行機*--------------*/
 
 .container img {
   width: 300px;
@@ -163,6 +196,7 @@ justify-content: center;
   font-size: 16px;
   width: 300px;
   font-family: 'Cormorant Garamond', serif;
+  margin: auto;
 }
 .caption a{
   text-decoration: none;
