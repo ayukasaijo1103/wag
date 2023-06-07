@@ -171,46 +171,7 @@ svg{
 
 
 
-/*アイコンアニメーション*/
-.keyframe3{
-  
-  animation-name: anim_s;
 
-  transform: rotate(30deg);
-
-  animation-duration: 3s;
-
-  animation-iteration-count: infinite;
-
-}
-
- 
-
-@keyframes anim_s {
-
-  50% {
-
-    transform: rotate(-25deg);
-
-  }
-
-  100% {
-
-    transform: rotate(30deg);
-
-  }
-
-}
-
-img{
-  width: 150px;
-  height: 150px;
-}
-.dog{
-  text-align: center;
- margin-top: 50px;
- margin-bottom: 10px;
-}
 
 /*NEWS-PAGE---------------------------------*/
 
