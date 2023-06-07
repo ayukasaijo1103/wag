@@ -17,7 +17,8 @@
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #BC9A78;
+    /* background-color: #BC9A78; */
+    background-color: rgba(188,154,120,0.6);
     height: 100px;
     z-index:9999;
   }
