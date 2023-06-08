@@ -17,8 +17,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    /* background-color: #BC9A78; */
-    background-color: rgba(188,154,120,0.6);
+    background-color: #BC9A78;
     height: 100px;
     z-index:9999;
   }
@@ -126,7 +125,7 @@
 }
 
 .message-page{
-  padding-bottom: 10px;
+  padding-bottom: 100px;
 }
 
 .wag{
@@ -169,10 +168,6 @@ svg{
   width: 100%;
   margin-top: 50px;
 }
-
-
-
-
 
 /*NEWS-PAGE---------------------------------*/
 
@@ -221,6 +216,7 @@ justify-content: center;
 .news-page{
   background-color: rgba(228, 228, 228, 0.65);
 }
+
 
 /*ふわっと--------------------------*/
 .fadeUp {

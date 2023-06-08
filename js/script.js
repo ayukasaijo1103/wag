@@ -36,10 +36,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   window.addEventListener('load', fadeElements);
 
 
-
-
-
-
+ 
   // $(window).on('load',function(){
   //   $("#splash-logo").delay(1200).fadeOut('slow');//ロゴを1.2秒でフェードアウトする記述
     
