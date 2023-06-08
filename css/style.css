@@ -267,19 +267,20 @@ justify-content: center;
     font-size: 2.5rem;
   }
 
-  .menu{
+  .slider{
     display: flex;
     gap: 20px;
+    width: 100%;
   }
 
-  .menu p{
+  .slider p{
     font-family: 'Cormorant Garamond', serif;
     text-align: center;
   }
 
-  .menu img{
-    width: 200px;
-    height: 200px;
+  .slider img{
+    width: 100px;
+    height: 100px;
     object-fit: cover;
     border-radius: 40%;
   }
