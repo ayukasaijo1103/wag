@@ -207,7 +207,7 @@ justify-content: center;
 }
 
 .news-title{
-  font-family: 'Caveat', cursive;
+  font-family: 'Quicksand', sans-serif;
   text-align: center;
   padding-top: 40px;
   margin-bottom: 30px;
@@ -260,7 +260,7 @@ justify-content: center;
 
   /*menu-paeg---------------*/
   .menu-title{
-    font-family: 'Caveat', cursive;
+    font-family: 'Quicksand', sans-serif;
     text-align: center;
     padding-top: 40px;
     margin-bottom: 100px;
@@ -398,7 +398,85 @@ justify-content: center;
 .btn{
   text-align: center;
   margin-top: 50px;
+  margin-bottom: 80px;
 }
+
+/*==========CONTACT-PAGE==========*/
+
+.contact-title{
+  font-family: 'Quicksand', sans-serif;
+  text-align: center;
+  padding-top: 40px;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+  font-weight: lighter;
+}
+
+label{
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 500;
+  font-size: 1.65rem;
+  display: block;
+  
+}
+
+input[type="text"],
+input[type="email"]
+{
+  background: rgba(128,128,128,0.45);
+  border:1px solid #fff ;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+input[type="text"],
+input[type="email"]{
+  width:100%;
+  max-width: 255px;
+  height: 3rem;
+}
+
+textarea{
+  width: 100%;
+  max-width: 300px;
+  height: 6rem;
+}
+
+#message{
+  background: rgba(128,128,128,0.45);
+  border:1px solid #fff ;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+.contact{
+  text-align: center;
+}
+
+.tag{
+  margin-bottom: 25px;
+}
+
+input[type="submit"]{
+  border: none;
+  cursor:pointer;
+  line-height: 1;
+  background-color: rgba(255,255,255,.5);
+  padding: 20px 30px;
+  border-radius: 10%;
+  font-family: 'Quicksand', sans-serif;
+font-size: 1.275rem;
+}
+
+
+
+
+
+
+
+
 
 /*========= ローディング画面のためのCSS ===============*/
 #splash {
