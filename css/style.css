@@ -263,27 +263,44 @@ justify-content: center;
     font-family: 'Caveat', cursive;
     text-align: center;
     padding-top: 40px;
-    margin-bottom: 30px;
+    margin-bottom: 100px;
     font-size: 2.5rem;
   }
-
-  .slider{
-    display: flex;
-    gap: 20px;
-    width: 100%;
-  }
-
-  .slider p{
+  .menu-page p{
+    margin-top: 20px;
+    font-size: 16px;
     font-family: 'Cormorant Garamond', serif;
     text-align: center;
-  }
 
-  .slider img{
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 40%;
+
   }
+  
+/*==================================================
+スライダーのためのcss
+===================================*/
+.slider img {
+  width:300px;
+  height:300px;
+  object-fit: cover;
+  border-radius: 40%;
+  text-align: center;
+  gap: 50px;
+}
+
+ .slick-slide{
+  width: 300px !important;
+} 
+
+
+
+/*slickのJSで書かれるタグ内、スライド左右の余白調整*/
+
+.slider .slick-slide {
+  margin:0 10px;/*スライド左右の余白調整*/
+}
+ 
+  
+      
   
 
 
