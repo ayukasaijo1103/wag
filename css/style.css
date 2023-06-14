@@ -30,9 +30,12 @@
 }
 #page-link a{
     color: #432;
-    font-family: 'Dancing Script', cursive;
+    /* font-family: 'Dancing Script', cursive; */
+    font-family: 'Quicksand', sans-serif;
     text-decoration: none;
-    font-size: 1.5rem;
+    /* font-size: 1.5rem; */
+    font-size: 20px;
+    font-weight: 800;
 }
 #page-link a:hover{
     color: grey;
@@ -52,9 +55,10 @@
     position: absolute;
     margin-left: 150px;
     margin-top: 40px;
-    font-family: 'Cutive Mono', monospace;
-        font-size: 1.5rem;
-    }
+    /* font-family: 'Cutive Mono', monospace; */
+    font-size: 1.5rem;
+    font-family: 'Quicksand', sans-serif;
+  }
 /*MAIN PAGE---------------------------------*/
 .slideshow-container {
     width: 1000px;
@@ -82,7 +86,8 @@
   .slide img {
     width: 1000px;
     height: 600px;
-    border-radius:  60% 40% 70% 30% / 30% 60% 40% 70% ;
+    /* border-radius:  60% 40% 70% 30% / 30% 60% 40% 70% ; */
+    border-radius: 50% 20% / 10% 40%;
   }
 
   .main-content{
@@ -99,6 +104,11 @@
     margin-bottom: 50px;
     text-align: center;
   }
+
+ .back{
+  /* background-color: rgba(245,222,179,0.65); */
+  background-color: rgba(255,250,205,0.65);
+ }
  /*スクロールスナップ---------------------------------*/
  .container{
   overflow: auto;
