@@ -1,3 +1,19 @@
+const loadingAreaGrey=document.querySelector('#loading');
+window.addEventListener('load',()=>{
+  //ローディング中(グレースクリーン)
+  loadingAreaGrey.animate(
+      {
+          opacity:[1,0],
+          visibility:'hidden',
+      },
+      {
+          duration:2000,
+          delay:1200,
+          easing:'ease',
+          fill:'forwards',
+      }
+  );
+});
 document.addEventListener("DOMContentLoaded", function(event) {
     var slides = document.querySelectorAll(".slide");
     var currentSlide = 0;

@@ -1,5 +1,20 @@
 /*共通---------------------------*/
-
+:root {
+  --light-green: #d5edeb;
+  --green: #63dbd0;
+  --brown: #403632;
+  --light-brown: #deb068;
+  --white: #fff;
+  --oswald-font: 'Oswald', sans-serif;
+}
+#loading{
+  background-color:var(--light-brown);
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: grid;
+  place-items: center;
+}
 
 
 
