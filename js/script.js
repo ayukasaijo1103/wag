@@ -1,4 +1,6 @@
+//ローディングメニュー=====================================
 const loadingAreaGrey=document.querySelector('#loading');
+const loadingimg=document.querySelector('#loading img');
 window.addEventListener('load',()=>{
   //ローディング中(グレースクリーン)
   loadingAreaGrey.animate(
@@ -13,7 +15,52 @@ window.addEventListener('load',()=>{
           fill:'forwards',
       }
   );
+    loadingimg.animate(
+    {
+      opacity:[1,0],
+      rotate:['-25deg',0],
+    },
+    {
+      duration:1200,
+      ease:'easing',
+      fill:'forwards',
+      iterations:1,
+    }
+    );
 });
+
+//フェードイン=====================================
+const animateFade=(entries,obs)=>{
+    entries.forEach((entry)=>{
+      if(entry.isIntersecting){
+        entry.target.animate(
+        {
+          opacity:[0,1],
+          filter:['blur(.4rem)','blur(0)'],
+          translate:['0 4rem',0],
+        },
+        {
+          duration:2000,
+          easing:'ease',
+          fill:'forwards',
+        }
+        );
+        obs.unobserve(entry.target);
+      }
+    });
+  };
+  const fadeObserver=new IntersectionObserver(animateFade);
+  const fadeElements=document.querySelectorAll('.fadein');
+  fadeElements.forEach((fadeElement)=>{
+    fadeObserver.observe(fadeElement);
+  });
+
+
+  
+
+
+
+//メインメニュー=====================================
 document.addEventListener("DOMContentLoaded", function(event) {
     var slides = document.querySelectorAll(".slide");
     var currentSlide = 0;
@@ -24,60 +71,47 @@ document.addEventListener("DOMContentLoaded", function(event) {
       currentSlide = (currentSlide + 1) % slides.length;
       slides[currentSlide].classList.add("active");
     }
-
   });
- // ページが読み込まれたときに実行される関数
- function fadeElements() {
-  var fadeElements = document.querySelectorAll('.fade-in');
-  
-  // スクロールイベントのハンドラ関数
-  function fade() {
-    fadeElements.forEach(function(element) {
-      var elementTop = element.getBoundingClientRect().top;
-      var elementBottom = element.getBoundingClientRect().bottom;
-      
-      // ウィンドウの中央に要素が表示された場合にフェードイン
-      if (elementTop < window.innerHeight && elementBottom >= 0) {
-        element.style.opacity = "1";
-      }
-    });
-  }
-    fade();
-    
-    // スクロールイベントのリスナーを追加
-    window.addEventListener('scroll', fade);
-  }
-  
-  // ページが読み込まれたときにfadeElements関数を実行
-  window.addEventListener('load', fadeElements);
 
-  $('#page-link a[href*="#"]').click(function () {//全てのページ内リンクに適用させたい場合はa[href*="#"]のみでもOK
+//ページ内リンク=====================================
+$('#page-link a[href*="#"]').click(function () {//全てのページ内リンクに適用させたい場合はa[href*="#"]のみでもOK
     var elmHash = $(this).attr('href'); //ページ内リンクのHTMLタグhrefから、リンクされているエリアidの値を取得
     var pos = $(elmHash).offset().top;	//idの上部の距離を取得
     $('body,html').animate({scrollTop: pos}, 500); //取得した位置にスクロール。500の数値が大きくなるほどゆっくりスクロール
     return false;
   });
- 
-  // $(window).on('load',function(){
-  //   $("#splash-logo").delay(1200).fadeOut('slow');//ロゴを1.2秒でフェードアウトする記述
-    
-  //   //=====ここからローディングエリア（splashエリア）を1.5秒でフェードアウトした後に動かしたいJSをまとめる
-  //   $("#splash").delay(1500).fadeOut('slow',function(){//ローディングエリア（splashエリア）を1.5秒でフェードアウトする記述
-    
-  //   $('body').addClass('appear');//フェードアウト後bodyにappearクラス付与
-    
-  //   });
-  //   //=====ここまでローディングエリア（splashエリア）を1.5秒でフェードアウトした後に動かしたいJSをまとめる
-    
-  //   //=====ここから背景が伸びた後に動かしたいJSをまとめたい場合は
-  //   $('.splashbg').on('animationend', function() { 
-  //   //この中に動かしたいJSを記載
-  //   });
-  //   //=====ここまで背景が伸びた後に動かしたいJSをまとめる
-    
-  //   });
+//ニュースページ=====================================
+const items = document.querySelectorAll('.img-item');
+//console.log(items);
 
-  $('.slider').slick({
+for (let i = 0; i < items.length; i++) {
+  const key = {
+    opacity: [0, 1]
+  };
+  const opt = {
+    duration: 600,
+    delay: i * 300,
+    fill: 'forwards',
+  };
+  items[i].animate(key, opt);
+}
+// const items=document.querySelectorAll('.img-item');
+// for(let i=0;i<items.length;i++){
+//   console.log(i);
+//   const key={
+//     opacity:[0,1]
+//   };
+//   const option={
+//     duration:600,
+//     delay:i*300,
+//     fill:'forwards',
+//   };
+//   items[i].animate(key,option);
+// }
+ 
+    
+//メニューページ=====================================
+$('.slider').slick({
     arrows: false,//左右の矢印はなし
     autoplay: true,//自動的に動き出すか。初期値はfalse。
     autoplaySpeed: 0,//自動的に動き出す待ち時間。初期値は3000ですが今回の見せ方では0
@@ -103,3 +137,4 @@ document.addEventListener("DOMContentLoaded", function(event) {
     }
   ]
   });
+
