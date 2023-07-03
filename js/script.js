@@ -89,8 +89,8 @@ for (let i = 0; i < items.length; i++) {
     opacity: [0, 1]
   };
   const opt = {
-    duration: 600,
-    delay: i * 300,
+    duration: 6000,
+    delay: i * 1000,
     fill: 'forwards',
   };
   items[i].animate(key, opt);
