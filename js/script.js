@@ -81,35 +81,69 @@ $('#page-link a[href*="#"]').click(function () {//全てのページ内リンク
     return false;
   });
 //ニュースページ=====================================
-const items = document.querySelectorAll('.img-item');
+// const items = document.querySelectorAll('.img-item');
 //console.log(items);
 
-for (let i = 0; i < items.length; i++) {
-  const key = {
-    opacity: [0, 1]
-  };
-  const opt = {
-    duration: 6000,
-    delay: i * 1000,
-    fill: 'forwards',
-  };
-  items[i].animate(key, opt);
-}
-// const items=document.querySelectorAll('.img-item');
-// for(let i=0;i<items.length;i++){
-//   console.log(i);
-//   const key={
-//     opacity:[0,1]
+// for (let i = 0; i < items.length; i++) {
+//   const key = {
+//     opacity: [0, 1]
 //   };
-//   const option={
-//     duration:600,
-//     delay:i*300,
-//     fill:'forwards',
+//   const opt = {
+//     duration: 6000,
+//     delay: i * 1000,
+//     fill: 'forwards',
 //   };
-//   items[i].animate(key,option);
-// }
- 
-    
+//   items[i].animate(key, opt);
+// }  
+
+const animateFadein=(entries,obs)=>{
+  entries.forEach((entry)=>{
+    if(entry.isIntersecting){
+      entry.target.animate(
+      {
+        opacity:[0,1],
+        filter:['blur(.4rem)','blur(0)'],
+        translate:['0 4rem',0],
+      },
+      {
+        duration:3000,
+        easing:'ease',
+        fill:'forwards',
+      }
+      );
+      obs.unobserve(entry.target);
+    }
+  });
+};
+const fadeinObserver=new IntersectionObserver(animateFadein);
+const fadeinElements=document.querySelectorAll('.img-item');
+fadeinElements.forEach((fadeinElement)=>{
+  fadeinObserver.observe(fadeinElement);
+});
+//ACCESSページ
+
+const heading=document.querySelector('.access-bg');
+
+const keyf={
+  borderRadius:[
+    '20% 50% 50% 70%/50% 50% 70% 50%',
+    '50% 20% 50% 50%/40% 40% 60% 60%',
+    '50% 40% 20% 40%/40% 50% 50% 80%',
+    '50% 50% 50% 20%/40% 40% 60% 60%',
+  ],
+  // opacity:[0,1],
+  // rotate:['X 360deg',0],
+};
+const opti={
+  duration:8000,
+  direction:'alternate',
+  iterations:Infinity,
+  // duration:8000,
+  // fill:'forwards',
+  // ease:'easing',
+};
+
+heading.animate(keyf,opti);    
 //メニューページ=====================================
 $('.slider').slick({
     arrows: false,//左右の矢印はなし
