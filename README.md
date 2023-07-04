@@ -1,4 +1,4 @@
 # wag
 ![アイコン](images/favicon.jpg)
 # 概要
-これは、CANELÉ / CROISSANT﻿ WAGのホームページです。
+これは、CANELÉ / CROISSANT﻿ WAG(徳島にあるカヌレ専門店)のホームページです。
