@@ -1,4 +1,4 @@
-# wag
+<img width="1114" alt="スクリーンショット 2024-01-10 140719" src="https://github.com/ayukasaijo1103/wag/assets/135251771/cd4cb215-9d83-43e5-92cc-1bb075a8a0f6"># wag　ホームページ
 # 概要
 これは、CANELÉ / CROISSANT﻿ WAG(徳島にあるカヌレ専門店)のホームページです.
 
@@ -38,5 +38,8 @@
 
 ・最後にアクセスページを設置。Googleマップを埋め込みユーザーが訪れやすいお店に
 
-![Uploading スクリーンショット 2024-01-10 141048.png…]()
+<img width="1110" alt="スクリーンショット 2024-01-10 141048" src="https://github.com/ayukasaijo1103/wag/assets/135251771/f3c78e95-19f9-4e7a-9b55-d25f9964125d">
+
+<img width="1109" alt="スクリーンショット 2024-01-10 141117" src="https://github.com/ayukasaijo1103/wag/assets/135251771/f95c074f-99de-4344-9074-16687696e711">
+
 
