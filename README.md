@@ -1,4 +1,4 @@
-# wag　HP
+# wag　ホームページ
 ![favicon](https://github.com/ayukasaijo1103/wag/assets/135251771/e9ce872d-0f1b-473a-8e99-221c44912eac)
 
 # 概要
